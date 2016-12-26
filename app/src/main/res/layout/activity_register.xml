@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_register">
+
+    <ImageView
+        android:id="@id/register_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/back1"
+        android:onClick="register"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="190dp">
+
+        <com.example.administrator.hotnews.home.main.bean.MyEditText
+            android:id="@id/register_username"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:hint="Username"
+            android:gravity="center"
+            android:textColorHint="#555c7a"
+            android:background="#e1e2e9"
+            />
+
+        <com.example.administrator.hotnews.home.main.bean.MyEditText
+            android:id="@id/register_password"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:gravity="center"
+            android:textColorHint="#555c7a"
+            android:background="#e1e2e9"
+            android:layout_marginTop="20dp"/>
+
+        <com.example.administrator.hotnews.home.main.bean.MyEditText
+            android:id="@id/register_phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:hint="Phonenumber"
+            android:inputType="number"
+            android:gravity="center"
+            android:textColorHint="#555c7a"
+            android:background="#e1e2e9"
+            android:layout_marginTop="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:orientation="horizontal"
+            android:layout_weight="1.0"
+            >
+            <com.example.administrator.hotnews.home.main.bean.MyEditText
+                android:id="@id/register_code"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:hint="输入验证码"
+                android:inputType="number"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:textColorHint="#555c7a"
+                android:textSize="15sp"
+                android:background="#e1e2e9"
+                />
+
+            <Button
+                android:id="@id/register_get"
+                android:layout_width="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/register_code"
+                android:layout_alignRight="@+id/linearLayout2"
+                android:layout_alignBottom="@id/register_code"
+                android:text="发送验证码"
+                android:textSize="15sp"
+                android:onClick="getSmsCode"
+                android:textColor="#ffffff"
+                android:background="#95aeb5"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="90dp"
+            android:text="注册"
+            android:onClick="register"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:background="#95aeb5"
+            android:layout_marginTop="20dp"
+            />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_find_back_pass"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/forget"
+   >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerInParent="true">
+
+    <com.example.administrator.hotnews.home.main.bean.MyEditText
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="#ffffff"
+        android:id="@+id/old_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:hint="请输入原密码"
+        android:inputType="textPassword"
+        />
+    <com.example.administrator.hotnews.home.main.bean.MyEditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/new_pass"
+        android:background="#ffffff"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:hint="请输入新密码"
+        android:inputType="textPassword"
+        />
+
+    <com.example.administrator.hotnews.home.main.bean.MyEditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/verify_pass"
+        android:background="#ffffff"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:hint="请确认新密码"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确认提交"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+
+        />
+  </LinearLayout>
+</RelativeLayout>

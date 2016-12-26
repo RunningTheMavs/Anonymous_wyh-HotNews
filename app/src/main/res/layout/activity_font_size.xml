@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_font_size"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/font_bg">
+
+    <LinearLayout
+        android:id="@+id/linera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="人生就是一场单程的旅行"
+            android:textColor="#ffffff"
+
+            />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="即使有些遗憾"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="我们也没有从头再来的机会"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:text="与其纠结无法改变的过去"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:text="不如微笑着，珍惜未来"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="因为生活，没有如果"
+            android:textColor="#ffffff"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linera"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/sizesmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="小"
+            android:textColor="#ffffff"
+            android:background="#95aeb5"
+            android:layout_marginLeft="10dp"
+            />
+
+        <Button
+            android:id="@+id/sizemiddle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="中"
+            android:textColor="#ffffff"
+            android:background="#95aeb5"
+            android:layout_marginLeft="10dp"
+            />
+
+        <Button
+            android:id="@+id/sizebig"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="大"
+            android:textColor="#ffffff"
+            android:background="#95aeb5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+    </LinearLayout>
+
+    <!--<SeekBar-->
+    <!--android:id="@+id/seekBar"-->
+    <!--android:layout_width="210dp"-->
+    <!--android:layout_height="3dp"-->
+    <!--android:layout_marginTop="450dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="#1585fe"-->
+    <!--style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="小"-->
+    <!--android:textSize="15sp"-->
+    <!--android:layout_below="@id/seekBar"-->
+    <!--android:layout_toLeftOf="@id/seekBar"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="中"-->
+    <!--android:textSize="25sp"-->
+    <!--android:layout_below="@id/seekBar"-->
+    <!--android:layout_marginLeft="180dp"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="大"-->
+    <!--android:textSize="45sp"-->
+    <!--android:layout_below="@id/seekBar"-->
+    <!--android:layout_toRightOf="@id/seekBar"-->
+    <!--/>-->
+
+    <!--</LinearLayout>--><!--<Button-->
+    <!--android:id="@+id/font_small"-->
+    <!--style="@style/title_text"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="小"-->
+    <!--android:textSize="15sp"-->
+    <!--android:onClick="change"-->
+    <!--/>-->
+    <!--<Button-->
+    <!--android:id="@+id/font_middle"-->
+    <!--style="@style/title_text"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="中"-->
+    <!--android:textSize="25sp"-->
+    <!--android:onClick="change"-->
+    <!--/>-->
+    <!--<Button-->
+    <!--android:id="@+id/font_large"-->
+    <!--style="@style/title_text"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="大"-->
+    <!--android:textSize="45sp"-->
+    <!--android:onClick="change"-->
+    <!--/>-->
+</RelativeLayout>

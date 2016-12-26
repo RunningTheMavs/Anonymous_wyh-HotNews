@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <LinearLayout
+        android:id="@id/linearlayout_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#7022284f"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:id="@id/linearlayout_home_news"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            >
+
+            <Button
+                android:id="@id/bt_home_news"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/news"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/linearlayout_home_video"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            >
+
+            <Button
+                android:id="@id/bt_home_video"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/video"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/linearlayout_home_picture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            >
+
+            <Button
+                android:id="@id/bt_home_picture"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/pictrue"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/linearlayout_home_center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            >
+
+            <Button
+                android:id="@id/bt_home_my_centre"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/setting"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@id/frameLayout_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linearlayout_home"
+        />
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/item_bg"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="#70ffffff"
+    android:orientation="horizontal"
+    >
+
+    <ImageView
+        android:id="@id/iv_news_pic"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitCenter"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/whiteBackgroundColor"
+
+        >
+
+        <TextView
+            android:id="@id/tv_news_title"
+            style="@style/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/SeniorBlackColor"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@id/tv_news_date"
+            style="@style/subtitle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/SeniorBlackColor"
+            android:textSize="10sp"
+            />
+
+        <TextView
+            android:id="@id/tv_news_source"
+            style="@style/subtitle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/SeniorBlackColor"
+            android:textSize="10sp"
+            />
+
+    </RelativeLayout>
+</LinearLayout>
