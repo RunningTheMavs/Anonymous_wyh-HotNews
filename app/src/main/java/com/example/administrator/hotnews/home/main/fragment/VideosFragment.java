@@ -159,15 +159,13 @@ public class VideosFragment extends Fragment {
                 if (isFirtLoad) {
                     isFirtLoad = false;
                     videosAdapter.refreshData(datas);
-                }
-                else if (isRefresh) {
+                } else if (isRefresh) {
                     isRefresh = false;
                     videosAdapter.refreshData(datas);
                     listView.completeRefresh();
                     Toast.makeText(getActivity(), "暂无最新数据，请下拉加载...",
                             Toast.LENGTH_SHORT).show();
-                }
-                else if (isLoadMore) {
+                } else if (isLoadMore) {
                     isLoadMore = false;
                     videosAdapter.addData(datas);
                     listView.completeRefresh();

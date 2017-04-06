@@ -39,8 +39,8 @@ public class NewsFragment extends Fragment {
     //当前指示器的最左边
     int currentIndicatorLeft = 0;
 
-    String[] tabTitle = new String[]{"体育", "足球", "军事", "游戏", "社会",
-            "娱乐", "国内", "财经"};
+    String[] tabTitle = new String[]{"科技", "体育", "足球", "军事", "游戏", "社会",
+            "娱乐", "国内", "国际", "教育", "财经"};
 
     @Nullable
     @Override
@@ -121,7 +121,7 @@ public class NewsFragment extends Fragment {
 
     private void initFragmentList() {
         newsList = new ArrayList<>();
-//        newsList.add(new TopNewsFragment(Constants.KEJI_REQUEST_URL));
+        newsList.add(new TopNewsFragment(Constants.KEJI_REQUEST_URL));
         newsList.add(new TopNewsFragment(Constants.TIYU_REQUEST_URL));
         newsList.add(new TopNewsFragment(Constants.ZUQIU_REQUEST_URL));
         newsList.add(new TopNewsFragment(Constants.JUNSHI_REQUEST_URL));
@@ -129,8 +129,8 @@ public class NewsFragment extends Fragment {
         newsList.add(new TopNewsFragment(Constants.SHEHUI_REQUEST_URL));
         newsList.add(new TopNewsFragment(Constants.YULE_REQUEST_URL));
         newsList.add(new TopNewsFragment(Constants.GUONEI_REQUEST_URL));
-//        newsList.add(new TopNewsFragment(Constants.GUOJI_REQUEST_URL));
-//        newsList.add(new TopNewsFragment(Constants.JIAOYU_REQUEST_URL));
+        newsList.add(new TopNewsFragment(Constants.GUOJI_REQUEST_URL));
+        newsList.add(new TopNewsFragment(Constants.JIAOYU_REQUEST_URL));
         newsList.add(new TopNewsFragment(Constants.CAIJING_REQUEST_URL));
     }
 

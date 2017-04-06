@@ -97,42 +97,42 @@
                 android:layout_marginTop="10dp"
                 android:background="#8abeb9" />
 
-            <!--<RelativeLayout-->
-                <!--android:id="@id/setting_update_information"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="50dp"-->
-                <!--android:background="@drawable/selector_setting"-->
-                <!--android:clickable="true"-->
-                <!--android:focusable="true"-->
-                <!--android:gravity="center_vertical">-->
+            <RelativeLayout
+                android:id="@id/setting_update_information"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_setting"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical">
 
-                <!--<ImageView-->
-                    <!--android:layout_width="40dp"-->
-                    <!--android:layout_height="40dp"-->
-                    <!--android:layout_alignParentLeft="true"-->
-                    <!--android:layout_centerVertical="true"-->
-                    <!--android:layout_marginLeft="5dp"-->
-                    <!--android:background="@drawable/person" />-->
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/person" />
 
-                <!--<TextView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:layout_marginLeft="50dp"-->
-                    <!--android:gravity="center"-->
-                    <!--android:text="完善信息"-->
-                    <!--android:textColor="@color/SeniorBlackColor"-->
-                    <!--android:textSize="15sp" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:gravity="center"
+                    android:text="完善信息"
+                    android:textColor="@color/SeniorBlackColor"
+                    android:textSize="15sp" />
 
-                <!--<ImageView-->
-                    <!--android:id="@+id/change_info"-->
-                    <!--android:layout_width="30dp"-->
-                    <!--android:layout_height="30dp"-->
-                    <!--android:layout_alignParentRight="true"-->
-                    <!--android:layout_centerVertical="true"-->
-                    <!--android:layout_marginRight="30dp"-->
-                    <!--android:background="@drawable/right"-->
-                    <!--android:focusable="false" />-->
-            <!--</RelativeLayout>-->
+                <ImageView
+                    android:id="@+id/change_info"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/right"
+                    android:focusable="false" />
+            </RelativeLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -322,7 +322,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="5dp"
-                    android:background="@drawable/person" />
+                    android:background="@drawable/np" />
 
                 <TextView
                     android:layout_width="wrap_content"

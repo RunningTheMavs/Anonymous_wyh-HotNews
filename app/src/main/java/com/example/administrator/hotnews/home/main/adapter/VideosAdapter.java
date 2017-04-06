@@ -45,7 +45,7 @@ public class VideosAdapter extends BaseAdapter {
         scaleAnimation = new ScaleAnimation(0.0f, 1.0f, 0.0f, 1.0f,
                 Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         scaleAnimation.setFillAfter(false);
-        scaleAnimation.setDuration(300);
+        scaleAnimation.setDuration(150);
         scaleAnimation.setInterpolator(new LinearInterpolator());
     }
 

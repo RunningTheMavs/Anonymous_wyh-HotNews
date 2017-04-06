@@ -106,7 +106,6 @@ public class PlayVideoActivity extends BaseActivity {
                 bt_play.setBackgroundResource(R.drawable.play);
                 bt_fullScreen.setVisibility(View.VISIBLE);
                 finishAnim();
-                finish();
             }
         });
         //动画监听

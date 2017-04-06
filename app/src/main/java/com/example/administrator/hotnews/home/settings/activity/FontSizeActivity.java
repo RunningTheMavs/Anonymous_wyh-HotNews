@@ -75,7 +75,7 @@ public class FontSizeActivity extends BaseActivity {
                 text4.setTextSize(8);
                 text5.setTextSize(8);
                 text6.setTextSize(8);
-                toast("请刷新生效");
+                toast("请重启软件生效");
 
             }
         });
@@ -90,7 +90,7 @@ public class FontSizeActivity extends BaseActivity {
                 text4.setTextSize(12);
                 text5.setTextSize(12);
                 text6.setTextSize(12);
-                toast("请刷新生效");
+                toast("请重启软件生效");
             }
         });
 
@@ -105,7 +105,7 @@ public class FontSizeActivity extends BaseActivity {
                 text4.setTextSize(15);
                 text5.setTextSize(15);
                 text6.setTextSize(15);
-                toast("请刷新生效");
+                toast("请重启软件生效");
             }
         });
 

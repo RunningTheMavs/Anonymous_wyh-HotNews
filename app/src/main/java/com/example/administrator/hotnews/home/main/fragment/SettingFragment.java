@@ -110,8 +110,8 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_setting, container, false);
         imageView = (RoundImageView) view.findViewById(R.id.setting_header);
         iv_weather_icon = (ImageView) view.findViewById(R.id.iv_setting_weather_icon);
-//        setting_update_information = (RelativeLayout) view.findViewById(R.id
-//                .setting_update_information);
+        setting_update_information = (RelativeLayout) view.findViewById(R.id
+                .setting_update_information);
         setting_find_password = (RelativeLayout) view.findViewById(R.id.setting_find_password);
         setting_font = (RelativeLayout) view.findViewById(R.id.setting_font);
         setting_pic_mode = (RelativeLayout) view.findViewById(R.id.setting_pic_mode);
@@ -156,7 +156,7 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
         tv_setting_city.setText(city_name);
         bt_setting_position.setOnClickListener(this);
         imageView.setOnClickListener(this);
-//        setting_update_information.setOnClickListener(this);
+        setting_update_information.setOnClickListener(this);
         setting_find_password.setOnClickListener(this);
         setting_font.setOnClickListener(this);
         setting_pic_mode.setOnClickListener(this);
@@ -347,11 +347,11 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
                     }
                 });
                 break;
-//            case R.id.setting_update_information:
-//                startActivity(new Intent(getActivity(), ChangeYourInfo.class));
-//                getActivity().overridePendingTransition(R.anim.anim_activity_slide_in_right,
-//                        R.anim.anim_activity_slide_out_left);
-//                break;
+            case R.id.setting_update_information:
+                startActivity(new Intent(getActivity(), ChangeYourInfo.class));
+                getActivity().overridePendingTransition(R.anim.anim_activity_slide_in_right,
+                        R.anim.anim_activity_slide_out_left);
+                break;
             case R.id.setting_find_password:
                 startActivity(new Intent(getActivity(), FindPassword.class));
                 getActivity().overridePendingTransition(R.anim.anim_activity_slide_in_right,
@@ -383,7 +383,6 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putBoolean("LOGIN_STATE", false);
                 editor.commit();
-                Toast.makeText(getActivity(), "正在退出", Toast.LENGTH_SHORT).show();
                 QuitApp quitApp = new QuitApp();
                 quitApp.Quit();
                 break;

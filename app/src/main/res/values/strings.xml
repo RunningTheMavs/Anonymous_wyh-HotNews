@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">点线资讯</string>
+    <string name="app_name">news</string>
     <string name="loading">News Loading</string>
 </resources>

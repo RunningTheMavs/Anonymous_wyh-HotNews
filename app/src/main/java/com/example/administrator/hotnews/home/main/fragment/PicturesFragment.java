@@ -118,7 +118,7 @@ public class PicturesFragment extends Fragment {
                 Map<String, Object> indexObject = list.get(i);
                 String title = indexObject.get("text").toString();
                 String picUrl = null;
-                String picType = null;
+                String picType= null;
                 if (indexObject.get("gif") != null) {
                     picType = ".gif";
                     Map<String, Object> gif = JsonUtils.getMapObj(indexObject.get("gif")
@@ -127,21 +127,18 @@ public class PicturesFragment extends Fragment {
                     List<String> gif_thumbnail = JsonUtils.getListObject(gif.get("images")
                             .toString(), String.class);
                     picUrl = gif_thumbnail.get(0).toString();
-                    Pictures pictures = new Pictures(title, picUrl, picType);
-                    picturesList.add(pictures);
-                }
-//                else if (indexObject.get("image") != null) {
-//                    picType = ".jpg";
-//                    Map<String, Object> image = JsonUtils.getMapObj(indexObject.get("image")
-//                            .toString());
-//
-//                    List<String> big = JsonUtils.getListObject(image.get("big")
-//                            .toString(), String.class);
-//                    picUrl = big.get(0).toString();
-//                    Pictures pictures = new Pictures(title, picUrl, picType);
-//                    picturesList.add(pictures);
-//                }
+                } else if (indexObject.get("image") != null) {
+                    picType = ".jpg";
+                    Map<String, Object> image = JsonUtils.getMapObj(indexObject.get("image")
+                            .toString());
 
+                    List<String> big = JsonUtils.getListObject(image.get("big")
+                            .toString(), String.class);
+                    picUrl = big.get(0).toString();
+                }
+
+                Pictures pictures = new Pictures(title, picUrl,picType);
+                picturesList.add(pictures);
             }
 
             return picturesList;
@@ -157,7 +154,7 @@ public class PicturesFragment extends Fragment {
                     isRefresh = false;
                     picturesAdapter.refreshData(datas);
                     listView.completeRefresh();
-                    Toast.makeText(getActivity(), "暂无最新数据，请上滑加载更多...",
+                    Toast.makeText(getActivity(), "暂无最新数据，请下拉加载...",
                             Toast.LENGTH_SHORT).show();
                 } else if (isLoadMore) {
                     isLoadMore = false;

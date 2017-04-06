@@ -1,6 +1,7 @@
 package com.example.administrator.hotnews.home.main.activity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -29,8 +30,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *  展示新闻详情页面
- *  Created by Anonymous_W on 2016/11/5.
+ * 展示新闻详情页面
+ * Created by Anonymous_W on 2016/11/5.
  */
 public class ShowNewsActivity extends BaseActivity implements View.OnClickListener {
     private TextView tv_news_show_title, tv_news_show_source;
@@ -38,6 +39,9 @@ public class ShowNewsActivity extends BaseActivity implements View.OnClickListen
     private ImageView iv_news_show_back, iv_news_show_setting,
             iv_news_show_share, iv_news_show_collect, iv_news_show_comment;
     private News news;
+    private String newsTitle;
+    private String newsSource;
+    private String newsPubDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +67,10 @@ public class ShowNewsActivity extends BaseActivity implements View.OnClickListen
     public void initData() {
         Bundle bundle_news_data = getIntent().getBundleExtra("BUNDLE_NEW_DATA");
         news = (News) bundle_news_data.getSerializable("NEWS_DATA");
+        newsTitle = news.getTitle();
+        newsSource = news.getSource();
+        newsPubDate = news.getPubDate();
+
         tv_news_show_title.setText(news.getTitle());
         tv_news_show_source.setText(news.getSource() + "  " + news.getPubDate());
 
@@ -85,7 +93,10 @@ public class ShowNewsActivity extends BaseActivity implements View.OnClickListen
                 } else if (temp.contains("jpeg")) {
                     endIndex = temp.indexOf("jpeg") + 4;
                 }
-                String picUrl = temp.substring(fromIndex, endIndex);
+                String picUrl = "";
+                if (!(endIndex == 0)) {
+                    picUrl = temp.substring(fromIndex, endIndex);
+                }
                 //动态添加View 展示新闻详情
                 TextView textView = new TextView(this);
                 textView.setText(content);
@@ -96,10 +107,10 @@ public class ShowNewsActivity extends BaseActivity implements View.OnClickListen
                 linearlayout_news_content.addView(textView);
 
                 ImageView imageView = new ImageView(this);
-                imageView.setTag(picUrl);
+//                imageView.setTag(picUrl);
 
 
-                //                ImageLoader.getInstance().displayImage(picUrl, imageView);
+                ImageLoader.getInstance().displayImage(picUrl, imageView);
                 ImageAware imageAware = new ImageViewAware(imageView, false);
                 ImageLoader.getInstance().displayImage(picUrl, imageAware);
 
@@ -171,6 +182,7 @@ public class ShowNewsActivity extends BaseActivity implements View.OnClickListen
 
 
     private boolean isHave = false;
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -187,9 +199,9 @@ public class ShowNewsActivity extends BaseActivity implements View.OnClickListen
                         }
                     }
                     if (!isHave) {
-                            //添加收藏到本地数据库
-                            DBUtils.newInstance(this).insertData(news);
-                            Toast.makeText(this, "收藏成功", Toast.LENGTH_SHORT).show();
+                        //添加收藏到本地数据库
+                        DBUtils.newInstance(this).insertData(news);
+                        Toast.makeText(this, "收藏成功", Toast.LENGTH_SHORT).show();
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -203,7 +215,17 @@ public class ShowNewsActivity extends BaseActivity implements View.OnClickListen
                 break;
             //分享
             case R.id.iv_news_show_share:
-                Toast.makeText(this, "分享成功", Toast.LENGTH_SHORT).show();
+                Intent localIntent = new Intent("android.intent.action.SEND");
+                localIntent.setType("text/plain");
+                localIntent.putExtra("android.intent.extra.SUBJECT", "HotNews");
+                localIntent.putExtra("android.intent.extra.TEXT", "标题：" + newsTitle + "\r\n" + "来源：" + newsSource + "\r\n" + newsPubDate);
+                try {
+                    startActivity(
+                            Intent.createChooser(localIntent, "More Share"));
+                } catch (Exception localException) {
+                    Toast.makeText(this, "Share error", Toast.LENGTH_LONG)
+                            .show();
+                }
                 break;
         }
     }

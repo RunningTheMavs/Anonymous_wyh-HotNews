@@ -30,8 +30,8 @@ public class IApplication extends Application {
     public void onCreate() {
         super.onCreate();
         //异常收集类
-        CrashHandler crashHandler = CrashHandler.getInstance();
-        crashHandler.init(getApplicationContext());
+//        CrashHandler crashHandler = CrashHandler.getInstance();
+//        crashHandler.init(getApplicationContext());
         //初始化ImageLoader
         InitImageLoader(getApplicationContext());
         //初始化数据库
